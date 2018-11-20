@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ShaoStruct
 {
-    public class LinkNode<T> 
+    class LinkNode<T> 
     {
         public T data;
         public LinkNode<T> next;
@@ -89,7 +89,7 @@ namespace ShaoStruct
 		}
 
 		// 查看元素
-		public LinkNode<T> GetLastNode(int index)
+		LinkNode<T> GetLastNode(int index)
         {
             LinkNode<T> lastNode;
             if (index == 0)
@@ -104,7 +104,7 @@ namespace ShaoStruct
             return lastNode;
         }
 
-		public LinkNode<T> GetNode(int index)
+		LinkNode<T> GetNode(int index)
 		{
             if (index < 0 || index > length - 1)
             {

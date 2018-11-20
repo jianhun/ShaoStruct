@@ -8,8 +8,9 @@ namespace ShaoStruct
         {
             Console.WriteLine("Hello World!");
 
-            List<int> structList = new List<int>(20);
-           // LinkList<int> structList = new LinkList<int>();
+            //List<int> structList = new List<int>(20);
+            // LinkList<int> structList = new LinkList<int>();
+            StaticLinkList<int> structList = new StaticLinkList<int>();
 
             for (int i = 0; i < 10; i++)
             {
