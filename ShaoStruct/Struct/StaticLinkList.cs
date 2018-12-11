@@ -9,7 +9,7 @@ namespace ShaoStruct
         public int next;
     }
 
-    public class StaticLinkList<T> : StructBase<T>
+    public class StaticLinkList<T> : ListBase<T>
     {
         StaticLinkNode<T>[] nodeList;
         int size;

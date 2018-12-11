@@ -3,7 +3,7 @@ using System.Text;
 
 namespace ShaoStruct
 {
-    public class List<T> : StructBase<T>
+    public class List<T> : ListBase<T>
     {
 
         T[] datas;

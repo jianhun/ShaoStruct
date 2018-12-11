@@ -6,56 +6,41 @@ namespace ShaoStruct
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
-            //List<int> structList = new List<int>(20);
-            // LinkList<int> structList = new LinkList<int>();
-            StaticLinkList<int> structList = new StaticLinkList<int>();
+            //Stack<int> stack = new Stack<int>(20);
+            //LinkStack<int> stack = new LinkStack<int>();
+            //Queue<int> stack = new Queue<int>(10);
+            QueueLink<int> stack = new QueueLink<int>();
 
             for (int i = 0; i < 10; i++)
             {
-                structList.Append(i * i);
+                stack.EnQueue(i * i);
             }
-            structList.Print();
 
-            structList.Insert(0, 2);
-            structList.Insert(5, 3);
-
-            structList.Print();
-
-            structList.Delete(5);
-            structList.Print();
-
-            structList.Delete(10);
-            structList.Print();
-
-            structList.Update(2, 99);
-            structList.Update(3, 100);
-            structList.Print();
-
-            structList[2] = 199;
-            structList.Print();
-
-            //structList.Clear();
-            //structList.Print();
-
-            Console.WriteLine(structList.IndexOf(25));
-            Console.WriteLine(structList.IndexOf(199));
-            Console.WriteLine(structList.IndexOf(200));
-
-            Console.WriteLine("Length:" + structList.Length);
-
-            Console.WriteLine(structList.IsEmpty());
-
-            structList.Clear();
-            structList.Print();
-
-            Console.WriteLine(structList.IsEmpty());
-
-            Console.WriteLine("Length:" + structList.Length);
+            stack.Print();
 
 
+            int d = stack.DeQueue();
+            Console.WriteLine("The pop data is: " + d);
+            d = stack.DeQueue();
+            Console.WriteLine("The pop data is: " + d);
+            stack.Print();
+            Console.WriteLine("The stack length is: " + stack.Length);
 
+            stack.EnQueue(180);
+            stack.Print();
+
+            stack.EnQueue(99);
+            stack.Print();
+
+            Console.WriteLine("The stack top data is: " + stack.GetHead());
+            Console.WriteLine("The stack length is: " + stack.Length);
+            Console.WriteLine("The stack is empty: " + stack.IsEmpty());
+
+            stack.Clear();
+            stack.Print();
+
+            Console.WriteLine("The stack length is: " + stack.Length);
+            Console.WriteLine("The stack is empty: " + stack.IsEmpty());
         }
     }
 }

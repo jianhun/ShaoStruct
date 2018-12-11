@@ -25,7 +25,7 @@ namespace ShaoStruct
         }
     }
 
-    public class LinkList<T> : StructBase<T>
+    public class LinkList<T> : ListBase<T>
     {
         LinkNode<T> head;
         int length;
